@@ -206,7 +206,7 @@ class Cart extends Component {
                                 <tbody>
                                     {cart.map(c => (
                                         <tr key={c.id}>
-                                            <td>{c.name}</td>
+                                            <td>{c.name} {c.price}</td>
                                             <td>
                                                 <input
                                                     type="text"
@@ -218,6 +218,7 @@ class Cart extends Component {
                                                             event.target.value
                                                         )
                                                     }
+                                                    
                                                 />
                                                 <button
                                                     className="btn btn-danger btn-sm"
@@ -289,7 +290,7 @@ class Cart extends Component {
                                 key={p.id}
                                 className="item"
                             >
-                                <img src={p.image_url} alt="" />
+                                <img src={p.image} alt="" />
                                 <h5>{p.name}</h5>
                             </div>
                         ))}
